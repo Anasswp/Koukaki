@@ -503,7 +503,7 @@ main {
     padding-left: 28%;
   }
 }
-@media only screen and (max-width: 768px), (max-width: 425px), (max-width: 375px), (max-width: 320px) {
+@media screen and (max-width: 768px) {
   .flower_left,
   .flower_right,
   h2::before {
@@ -520,14 +520,35 @@ main {
   .banner_video {
     display: none;
   }
-  #studio h2,
-  .oscars_title h3 {
+  .oscars_title {
+    width: 90%;
+  }
+  .oscars_logo {
+    padding-bottom: 0;
+  }
+  .oscars h3 {
     font-size: 2rem;
+    line-height: 1.1em;
   }
   .story #place > div {
     margin-left: 1em !important;
     width: 440px;
     height: 258px;
     padding-top: 24%;
+  }
+  #studio h2 {
+    font-size: 2.1rem;
+  }
+}
+@media only screen and (max-width: 425px), (max-width: 320px) {
+  .oscars_title h3 {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+  .oscars_title {
+    width: 90%;
+  }
+  #studio h2 {
+    font-size: 1.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
