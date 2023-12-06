@@ -1,0 +1,235 @@
+.banner {
+  position: relative;
+  object-fit: contain;
+  height: 800px;
+  background-image: none;
+}
+
+.banner_background {
+  z-index: -2;
+  opacity: 1;
+  left: auto !important;
+  max-width: 100%;
+  overflow: hidden;  
+}
+
+.banner_video {  
+  z-index: 1;
+  opacity: 1;
+  left: auto !important;
+}
+
+.banner_background, 
+.banner_video {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  min-width: 1440px !important;  
+  animation: fadeInDown 2s 300ms both;
+}
+
+.banner_logo {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  z-index: 10;
+  animation: fadeInUp 2s 300ms both, floatWave 3s infinite ease-in-out;
+}
+
+
+/* Pour faire flotter les éléments */
+@keyframes floatWave {
+    0% {
+        transform: translate(-50%, -50%) translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) translateY(-50px) translateX(10px);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translateY(0) translateX(0);
+    }
+}
+
+/*Alignement des éléments du menu*/
+.main-navigation.toggled ul {
+	display: flex;
+}
+
+/* Création du bouton pour fermer */
+.modal-toggle.close .line:nth-child(2) {
+    opacity: 0;
+  }
+
+.modal-toggle.close .line:first-child {
+    transform: rotate(45deg) translate3d(8px, 6px, 0);
+  }
+  
+.modal-toggle.close  span.line:last-child {
+    transform: rotate(-45deg) translate3d(8px, -6px, 0);
+  }
+
+/*Positionnement des 3 lignes horizontales du bouton*/
+.modal-toggle{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 8px;
+  width: 40px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 3em;
+  cursor: pointer;
+}
+
+/*Stylisation des 3 lignes horizontales*/
+.modal-toggle .line{
+  height: 2px;
+  background-color: black;
+  display: block;
+  width: 100%;
+  margin: 0;
+  transition: all .3s ease-in-out;
+}
+
+.modal-content {
+    display: none;
+}
+
+.modal {
+    font-size: 0.4rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+.modal h2,
+.modal li > a {
+  font-size: 3.1rem;
+}
+
+.modal .modal-content {
+    position: relative;
+    width: 100%;
+    height: 92vh;
+    background: #FFF5E9;
+    font-size: 3em;
+    display: none;
+  }
+
+.modal-content_logo {
+  width: 150px;
+  height: 100px;
+  top: 123.83px;
+  left: 643px;
+  margin-top: 20px;
+  }
+  
+  .modal-content ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 300px;
+    gap: 1em;
+    padding-top: 50px;
+  }
+
+  .modal-content li a:hover,
+  .modal-content_footer a:hover {
+    text-shadow: -1px -1px 3px rgba(255, 92, 0, 0.3),
+                 3px -1px 3px rgba(255, 92, 0, 0.3),
+                 -1px 3px 3px rgba(255, 92, 0, 0.3),
+                 3px 3px 3px rgba(255, 92, 0, 0.3);
+  }
+  
+.modal-content_footer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    width: 160px;
+    height: 12px;
+    font-size: 14px;
+  }
+
+
+/* Positonnement des images dans le menu burger*/
+.orchid_content{
+  position: absolute;
+  top: 55px;
+  left: -45px;
+  width: 130px;
+  height: 130px;
+}
+
+.sunflower_content{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 70px;
+  left: 900px;
+}
+
+.random_flower_content{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 250px;
+  left: 1340px;
+}
+
+.flower_content{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 310px;
+  left: 260px; 
+}
+
+.hibiscus_content{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 400px;
+  left: 1200px;
+}
+
+.kawaneko_content{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 180px;
+  left: 300px;
+}
+
+.jaakuna_content{
+  position: absolute;
+  width: 110px;
+  height: 115px;
+  top: 370px;
+  left: 980px;
+}
+
+.orenjiiro_content{
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  top: 510px;
+  left: 150px;
+}
+
+/* Animation des chats du menu burger */
+.kawaneko_content,
+.jaakuna_content,
+.orenjiiro_content{
+  animation: floatWave 3s ease-in-out infinite alternate;
+}

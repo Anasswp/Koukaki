@@ -1,0 +1,40 @@
+/* Animation des nuages */
+.place_title{
+    padding-left: 0 !important;
+}
+
+#place {
+    position:relative;
+    background-image: url("./assets/images/place sans cloud.png") !important;
+    z-index: 1;
+  }
+
+.big_cloud,
+.little_cloud {
+    position: absolute;
+    z-index: 1;
+    filter: blur(10px);
+  }
+  
+.big_cloud {
+    height: 122px;	
+    right: 90px;
+    top: 60px;
+  }
+  
+ .little_cloud {
+    height: 55px;	
+    top: 250px;
+    right: 500px;
+  }
+
+  .story #place > div{
+    margin-left: 15em !important;
+    width: 440px;
+    height: 258px;
+    padding-top: 24%;
+  }
+
+  .story #place > div p {
+    padding-left: 0 !important;
+  }

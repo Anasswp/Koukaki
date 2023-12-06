@@ -1,0 +1,71 @@
+/* Rotation des fleurs */
+.story__article::after,
+#studio h2::before,
+.story h2::after,
+#studio h2::after,
+.site-footer::before,
+.site-footer::after,
+.nomination::before,
+.nomination::after,
+.site-footer ul::after,
+.modal ::after,
+.flower_left,
+.flower_right,
+.orchid_content,
+.sunflower_content,
+.random_flower_content,
+.hibiscus_content,
+.flower_content {
+    animation: rotate-flower var(--animation-duration) linear infinite;
+    transform-origin: center;
+}
+
+@keyframes rotate-flower {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.site-footer::before,
+.site-footer::after{
+    display: none;
+}
+
+h2::before{
+    width: 202.25px;
+    height: 198.99px;
+}
+
+.story h2::after{
+    width: 154px;
+    height: 154px;
+}
+
+.story__article::after{
+    width: 188px;
+    height: 188px;
+}
+
+#studio h2::after{
+    width: 108.76px;
+    height: 108.76px;
+}
+
+.flower_left{
+    width: 216px;
+    height: 216px;
+    position: absolute;
+    left: 4em;
+    top: 0em;
+}
+
+.flower_right{
+    width: 172.57px;
+    height: 168.24px;
+    position: absolute;
+	right: -4em;
+    bottom: 25em;
+}

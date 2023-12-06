@@ -1,0 +1,43 @@
+/* Swiper*/
+
+#characters {
+  width: 1440px;
+  height: 580px;
+  position: relative;
+	display: flex;
+	flex-direction: column;
+  }
+
+  .story #characters{
+    margin-bottom: 0 !important;
+  }
+
+
+  .story #characters h3{
+  width: 100%;
+  text-align: left !important;
+  background-position: 60px;
+  padding-top: 60px;
+  padding-left: 10%;
+  }
+
+  .mySwiper {
+  width: 100%;
+  
+  opacity: 1;
+  margin-bottom: 0;  
+  overflow: hidden;
+  }
+
+  .swiper-wrapper{
+  display: flex;
+  }
+
+  .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  }
+
+  .swiper-slide img {
+  display: block;
+  }

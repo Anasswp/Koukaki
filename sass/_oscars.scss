@@ -1,0 +1,32 @@
+/* Nomination aux oscars */
+.oscars{
+    position: relative;
+    padding: 150px 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.oscars_title{
+    position: relative;
+}
+
+.oscars_title img{
+    height: 100%;
+}
+
+.oscars_title h3{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    line-height: 52.5px;
+    letter-spacing: -0.02em;
+    padding: 1em !important;
+}
+
+.oscars_logo{
+    padding-bottom: 60px;
+}

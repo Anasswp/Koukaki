@@ -1,0 +1,533 @@
+@charset "UTF-8";
+/*
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
+ Theme URI: https://www.koukaki.local
+ Author: Studio Koukaki
+ Author URI: https://www.koukaki.local
+ Template: foce
+ Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
+ Version: 0.1
+ */
+.banner {
+  position: relative;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 800px;
+  background-image: none;
+}
+
+.banner_background {
+  z-index: -2;
+  opacity: 1;
+  left: auto !important;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.banner_video {
+  z-index: 1;
+  opacity: 1;
+  left: auto !important;
+}
+
+.banner_background,
+.banner_video {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  min-width: 1440px !important;
+  animation: fadeInDown 2s 300ms both;
+}
+
+.banner_logo {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  z-index: 10;
+  animation: fadeInUp 2s 300ms both, floatWave 3s infinite ease-in-out;
+}
+
+/* Pour faire flotter les éléments */
+@keyframes floatWave {
+  0% {
+    transform: translate(-50%, -50%) translateY(0) translateX(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-50px) translateX(10px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0) translateX(0);
+  }
+}
+/*Alignement des éléments du menu*/
+.main-navigation.toggled ul {
+  display: flex;
+}
+
+/* Création du bouton pour fermer */
+.modal-toggle.close .line:nth-child(2) {
+  opacity: 0;
+}
+
+.modal-toggle.close .line:first-child {
+  transform: rotate(45deg) translate3d(8px, 6px, 0);
+}
+
+.modal-toggle.close span.line:last-child {
+  transform: rotate(-45deg) translate3d(8px, -6px, 0);
+}
+
+/*Positionnement des 3 lignes horizontales du bouton*/
+.modal-toggle {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 8px;
+  width: 40px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 3em;
+  cursor: pointer;
+}
+
+/*Stylisation des 3 lignes horizontales*/
+.modal-toggle .line {
+  height: 2px;
+  background-color: black;
+  display: block;
+  width: 100%;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-content {
+  display: none;
+}
+
+.modal {
+  font-size: 0.4rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal h2,
+.modal li > a {
+  font-size: 3.1rem;
+}
+
+.modal .modal-content {
+  position: relative;
+  width: 100%;
+  height: 92vh;
+  background: #FFF5E9;
+  font-size: 3em;
+  display: none;
+}
+
+.modal-content_logo {
+  width: 150px;
+  height: 100px;
+  top: 123.83px;
+  left: 643px;
+  margin-top: 20px;
+}
+
+.modal-content ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 300px;
+  gap: 1em;
+  padding-top: 50px;
+}
+
+.modal-content li a:hover,
+.modal-content_footer a:hover {
+  text-shadow: -1px -1px 3px rgba(255, 92, 0, 0.3), 3px -1px 3px rgba(255, 92, 0, 0.3), -1px 3px 3px rgba(255, 92, 0, 0.3), 3px 3px 3px rgba(255, 92, 0, 0.3);
+}
+
+.modal-content_footer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+  width: 160px;
+  height: 12px;
+  font-size: 14px;
+}
+
+/* Positonnement des images dans le menu burger*/
+.orchid_content {
+  position: absolute;
+  top: 55px;
+  left: -45px;
+  width: 130px;
+  height: 130px;
+}
+
+.sunflower_content {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 70px;
+  left: 900px;
+}
+
+.random_flower_content {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 250px;
+  left: 1340px;
+}
+
+.flower_content {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 310px;
+  left: 260px;
+}
+
+.hibiscus_content {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 400px;
+  left: 1200px;
+}
+
+.kawaneko_content {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 180px;
+  left: 300px;
+}
+
+.jaakuna_content {
+  position: absolute;
+  width: 110px;
+  height: 115px;
+  top: 370px;
+  left: 980px;
+}
+
+.orenjiiro_content {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  top: 510px;
+  left: 150px;
+}
+
+/* Animation des chats du menu burger */
+.kawaneko_content,
+.jaakuna_content,
+.orenjiiro_content {
+  animation: floatWave 3s ease-in-out infinite alternate;
+}
+
+/* Rotation des fleurs */
+.story__article::after,
+#studio h2::before,
+.story h2::after,
+#studio h2::after,
+.site-footer::before,
+.site-footer::after,
+.nomination::before,
+.nomination::after,
+.site-footer ul::after,
+.modal ::after,
+.flower_left,
+.flower_right,
+.orchid_content,
+.sunflower_content,
+.random_flower_content,
+.hibiscus_content,
+.flower_content {
+  animation: rotate-flower var(--animation-duration) linear infinite;
+  transform-origin: center;
+}
+
+@keyframes rotate-flower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.site-footer::before,
+.site-footer::after {
+  display: none;
+}
+
+h2::before {
+  width: 202.25px;
+  height: 198.99px;
+}
+
+.story h2::after {
+  width: 154px;
+  height: 154px;
+}
+
+.story__article::after {
+  width: 188px;
+  height: 188px;
+}
+
+#studio h2::after {
+  width: 108.76px;
+  height: 108.76px;
+}
+
+.flower_left {
+  width: 216px;
+  height: 216px;
+  position: absolute;
+  left: 4em;
+  top: 0em;
+}
+
+.flower_right {
+  width: 172.57px;
+  height: 168.24px;
+  position: absolute;
+  right: -4em;
+  bottom: 25em;
+}
+
+/* Swiper*/
+#characters {
+  width: 1440px;
+  height: 580px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.story #characters {
+  margin-bottom: 0 !important;
+}
+
+.story #characters h3 {
+  width: 100%;
+  text-align: left !important;
+  background-position: 60px;
+  padding-top: 60px;
+  padding-left: 10%;
+}
+
+.mySwiper {
+  width: 100%;
+  opacity: 1;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+}
+
+/* Animation des nuages */
+.place_title {
+  padding-left: 0 !important;
+}
+
+#place {
+  position: relative;
+  background-image: url("./assets/images/place sans cloud.png") !important;
+  z-index: 1;
+}
+
+.big_cloud,
+.little_cloud {
+  position: absolute;
+  z-index: 1;
+  filter: blur(10px);
+}
+
+.big_cloud {
+  height: 122px;
+  right: 90px;
+  top: 60px;
+}
+
+.little_cloud {
+  height: 55px;
+  top: 250px;
+  right: 500px;
+}
+
+.story #place > div {
+  margin-left: 15em !important;
+  width: 440px;
+  height: 258px;
+  padding-top: 24%;
+}
+
+.story #place > div p {
+  padding-left: 0 !important;
+}
+
+/* Nomination aux oscars */
+.oscars {
+  position: relative;
+  padding: 150px 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.oscars_title {
+  position: relative;
+}
+
+.oscars_title img {
+  height: 100%;
+}
+
+.oscars_title h3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: left;
+  line-height: 52.5px;
+  letter-spacing: -0.02em;
+  padding: 1em !important;
+}
+
+.oscars_logo {
+  padding-bottom: 60px;
+}
+
+:root {
+  --animation-duration: 15s;
+}
+
+#page {
+  position: relative;
+}
+
+main {
+  overflow: hidden;
+}
+
+/* Banner */
+.animated {
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+}
+
+.fadeInUp {
+  animation: fadeInUp 2s 300ms;
+}
+
+/* Pour faire apparaitre les éléments en montant et avec augmentatation de l'opacité */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Pour faire apparaitre les éléments en descendant et avec agmentatation de l'opacité */
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+/* Apparition titres des sections en fade */
+.fadeInAnimation {
+  animation: fadeInAnimation 1s ease-in-out;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.titleAnimation {
+  display: inline-block;
+  margin-right: 15px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.2s ease-in, transform 0.5s ease-in;
+}
+.titleAnimation.visibility {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media query : max-width: 1024px  */
+@media screen and (max-width: 1024px) {
+  #characters h3 {
+    padding-left: 80px;
+  }
+  .story #characters h3 {
+    background-position: 32%;
+    padding-left: 28%;
+  }
+}
+@media only screen and (max-width: 768px), (max-width: 425px), (max-width: 375px), (max-width: 320px) {
+  .flower_left,
+  .flower_right,
+  h2::before {
+    display: none;
+  }
+  #characters h3 {
+    padding-left: 80px;
+  }
+  .story #characters h3 {
+    background-position: 50%;
+    padding-left: 40%;
+  }
+  .banner_background,
+  .banner_video {
+    display: none;
+  }
+  #studio h2,
+  .oscars_title h3 {
+    font-size: 2rem;
+  }
+  .story #place > div {
+    margin-left: 1em !important;
+    width: 440px;
+    height: 258px;
+    padding-top: 24%;
+  }
+}/*# sourceMappingURL=style.css.map */
