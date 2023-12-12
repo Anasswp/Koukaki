@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
- //JavaScript pour gérer la rotation de l'animation au défilement//
+ //Gestion de la rotation de l'animation au défilement//
  window.addEventListener("scroll", () => {
     var vertical = -1;
     setInterval(function () {
@@ -70,10 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Animation FadeIn //
-
-// Sélection des sections à animer //
 const sections = document.querySelectorAll('.story, #characters, #place, #studio, footer');
 
+// Création de l'observateur //
 const sectionObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -127,10 +126,10 @@ function fadeInAnimation(entry) {
     }
 }
 
-
+// Gestion de la fermeture et de l'ouverture de la modale avec jQuery
 (function ($) {
-    // Gestion de la fermeture et de l'ouverture de la modale avec jQuery
     $(".burger_open").click(function () {
+    // Animation de "modale" avec animate //
       $(".modal-content").animate(
         { height: "toggle", opacity: "toggle" },
         1000
@@ -138,6 +137,7 @@ function fadeInAnimation(entry) {
       $(".modal-content").toggleClass("open");
       $(".modal-toggle").toggleClass("close");
     });
+    // Au clic sur n'importe quel lien <a>, on vérifie si l'élément avec la classe "modal-content" a la classe "open" //
     $("a").click(function () {
       if ($(".modal-content").hasClass("open")) {
         $(".modal-content").animate(
